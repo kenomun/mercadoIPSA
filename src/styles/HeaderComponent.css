@@ -1,0 +1,48 @@
+.header-container {
+  color: white;
+  padding: 20px;
+  background-color: #030303; /* Fondo oscuro */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+.header-title {
+  margin-bottom: 1rem;
+}
+
+.separator {
+  width: 90%;
+  height: 2px;
+  background-color: #7e7d7d; /* Color más suave */
+  margin: 10px 0;
+}
+
+.header-title h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.header-title span {
+  font-size: 1rem;
+}
+
+.header-values {
+  display: flex;
+  flex-wrap: wrap; /* Asegura que los valores no se desborden */
+  gap: 15px;
+  margin-top: 1rem;
+}
+
+.header-values span {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.variation.negative,
+.points.negative {
+  color: red;
+}
+
+.variation.positive,
+.points.positive {
+  color: green;
+}

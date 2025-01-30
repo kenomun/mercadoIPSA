@@ -1,0 +1,13 @@
+.chart-container {
+  height: 100%;
+  width: 100%;
+  min-height: 400px;
+}
+
+.btn-group button:first-child {
+  border-radius: 10px 0 0 10px;
+}
+
+.btn-group button:last-child {
+  border-radius: 0 10px 10px 0;
+}
