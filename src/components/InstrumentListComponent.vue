@@ -101,7 +101,6 @@ export default {
           comparison = 1;
         }
 
-        // Si la dirección es descendente, invertimos el orden
         return this.sortDirection === "asc" ? comparison : -comparison;
       });
     },
@@ -118,7 +117,7 @@ export default {
 
     formatPercentage(value) {
       if (typeof value !== "number" || isNaN(value)) {
-        return "N/A"; // O un valor por defecto que prefieras
+        return "N/A";
       }
       return value >= 0 ? `+${value.toFixed(2)}%` : `${value.toFixed(2)}%`;
     },

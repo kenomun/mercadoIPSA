@@ -7,7 +7,7 @@ describe("HeaderComponent", () => {
       props: {
         name: "Juan",
         country: "Chile",
-        lastPrice: 12345.67, // Ejemplo de valor pasado
+        lastPrice: 12345.67,
         pctDay: 2.5,
         pointsVar: 10,
       },

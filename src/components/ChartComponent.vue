@@ -57,7 +57,6 @@ const createChart = () => {
     })
   );
 
-  // Crear el eje X (Fecha)
   const xAxis = chartInstance.xAxes.push(
     am5xy.DateAxis.new(root, {
       baseInterval: { timeUnit: "day", count: 1 },
@@ -69,12 +68,10 @@ const createChart = () => {
     })
   );
 
-  // Quitar todas las líneas verticales del eje X
   xAxis.get("renderer").grid.template.setAll({
     strokeOpacity: 0,
   });
 
-  // Crear el eje Y (Valor de la acción)
   const yAxis = chartInstance.yAxes.push(
     am5xy.ValueAxis.new(root, {
       renderer: am5xy.AxisRendererY.new(root, {
@@ -83,21 +80,17 @@ const createChart = () => {
     })
   );
 
-  // 🔥 FORZAR la línea vertical en el eje Y (para que se vea la "L")
   yAxis.get("renderer").grid.template.setAll({
-    stroke: am5.color(0xffffff), // Blanco para que se vea
-    strokeOpacity: 0.2, // Opacidad máxima
-    visible: true, // Asegurar que aparezca
-    location: 0, // Colocar al inicio
-    strokeWidth: 1, // Grosor más grande
+    stroke: am5.color(0xffffff),
+    visible: true,
+    strokeWidth: 1,
   });
 
-  // 🔥 HACER QUE LOS NÚMEROS SEAN BLANCOS
   yAxis.get("renderer").labels.template.setAll({
     strokeOpacity: 1,
     fontSize: 16,
-    fill: am5.color(0xffffff), // Blanco para que resalten
-    visible: true, // Que siempre se vean
+    fill: am5.color(0xffffff),
+    visible: true,
   });
 
   // Crear la serie de precios
@@ -116,18 +109,18 @@ const createChart = () => {
 
   series.fills.template.setAll({
     visible: true,
-    fillOpacity: 0.5, // Opacidad del relleno (ajústalo a gusto)
-    fill: am5.color("#00BFFF"), // Color celeste
+    fillOpacity: 0.5,
+    fill: am5.color("#00BFFF"),
   });
 
   series.fills.template.set(
     "fillGradient",
     am5.LinearGradient.new(root, {
       stops: [
-        { color: am5.color("#00BFFF"), opacity: 0.5 }, // Color celeste fuerte arriba
-        { color: am5.color("#00BFFF"), opacity: 0 }, // Transparente abajo
+        { color: am5.color("#00BFFF"), opacity: 0.5 },
+        { color: am5.color("#00BFFF"), opacity: 0 },
       ],
-      rotation: 90, // Orientación del gradiente
+      rotation: 90,
     })
   );
 

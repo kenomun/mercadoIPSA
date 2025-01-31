@@ -106,14 +106,14 @@ const loadInicial = async () => {
     );
     if (chartData) {
       const instrumentInicial = {
-        ...info, // Copiar los datos de info
-        lastPrice: chartData.lastPrice, // Añadir el último precio
-        performanceAbsolute: chartData.performanceAbsolute, // Añadir el rendimiento absoluto
-        performanceRelative: chartData.performanceRelative, // Añadir el rendimiento relativo
-        tend: chartData.tend, // Añadir la tendencia
-        datetimeLastPrice: chartData.datetimeLastPrice, // Añadir la fecha y hora del último precio
+        ...info,
+        lastPrice: chartData.lastPrice,
+        performanceAbsolute: chartData.performanceAbsolute,
+        performanceRelative: chartData.performanceRelative,
+        tend: chartData.tend,
+        datetimeLastPrice: chartData.datetimeLastPrice,
         volumeMoney: chartData.volumeMoney,
-        pctDay: -0.3517, // Añadir el volumen de dinero
+        pctDay: -0.3517,
       };
       handleInstrumentSelected(instrumentInicial);
     }
@@ -189,12 +189,10 @@ const getInstrumentLabel = (instrument) => {
 const handleInstrumentSelected = async (instrument) => {
   loadInstrumentSummary(instrument);
 
-  const codeInstrument = instrument.codeInstrument; // Obtenemos el código del instrumento
+  const codeInstrument = instrument.codeInstrument;
   try {
-    // Realizamos la búsqueda del archivo JSON en la carpeta "public/history" usando Axios
     const response = await axios.get(`/history/history-${codeInstrument}.json`);
 
-    // Comprobamos que la respuesta fue exitosa y la clave "chart" está presente
     if (response.status === 200) {
       const chartData = response.data.data.chart.map((item) => ({
         datetimeLastPrice: item.datetimeLastPrice,
@@ -202,7 +200,6 @@ const handleInstrumentSelected = async (instrument) => {
         datetimeLastPriceTs: item.datetimeLastPriceTs,
       }));
 
-      // Actualizar el estado global con los datos del gráfico
       appStore.setSelectedInstrument(instrument);
       appStore.setChartData(chartData);
     } else {

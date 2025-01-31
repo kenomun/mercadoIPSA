@@ -26,19 +26,16 @@ th button:hover {
 }
 
 th {
-  border-bottom: 2px solid #ccc; /* Línea separadora debajo de los encabezados */
+  border-bottom: 2px solid #ccc;
 }
 
 span {
   margin-left: 5px;
 }
 
-/* Estilos para las flechas */
 .sort-arrow {
   visibility: visible;
   margin: 0 5px;
   font-size: 16px;
   display: inline-block;
 }
-
-/* Estilos para números positivos y negativos */

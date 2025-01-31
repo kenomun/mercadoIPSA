@@ -12,7 +12,7 @@
 .separator {
   width: 90%;
   height: 2px;
-  background-color: #7e7d7d; /* Color más suave */
+  background-color: #7e7d7d;
   margin: 10px 0;
 }
 
@@ -27,7 +27,7 @@
 
 .header-values {
   display: flex;
-  flex-wrap: wrap; /* Asegura que los valores no se desborden */
+  flex-wrap: wrap;
   gap: 15px;
   margin-top: 1rem;
 }

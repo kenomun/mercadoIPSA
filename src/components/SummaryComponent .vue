@@ -74,7 +74,6 @@
       </div>
     </div>
 
-    <!-- Vista de resumen -->
     <div v-if="vista === 'resumen'" class="content-box">
       <p>Resumen del instrumento seleccionado.</p>
     </div>
@@ -85,7 +84,6 @@
 <script setup>
 import { defineProps, ref, onMounted } from "vue";
 
-// Recibimos los datos del instrumento como prop
 const props = defineProps({
   instrumentData: {
     type: Object,
@@ -93,7 +91,6 @@ const props = defineProps({
   },
 });
 
-// Estado reactivo para cambiar la vista
 const vista = ref("detalle");
 
 onMounted(() => {
@@ -105,7 +102,6 @@ onMounted(() => {
   }
 });
 
-// Funciones para cambiar la vista
 const mostrarResumen = () => (vista.value = "resumen");
 const mostrarDetalle = () => (vista.value = "detalle");
 </script>

@@ -101,7 +101,6 @@ export default {
           comparison = 1;
         }
 
-        // Si la dirección es descendente, invertimos el orden
         return this.sortDirection === "asc" ? comparison : -comparison;
       });
     },

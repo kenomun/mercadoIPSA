@@ -14,19 +14,15 @@
 <script setup>
 import { defineProps, defineEmits, ref, watch } from "vue";
 
-// Recibir los índices y el índice seleccionado desde el padre
 const props = defineProps({
   indices: Array,
   selectedTab: String,
 });
 
-// Emitir eventos al padre
 const emit = defineEmits(["tab-selected"]);
 
-// Estado del índice seleccionado
 const selectedIndex = ref(props.selectedTab || props.indices[0]?.code);
 
-// Actualizar el índice cuando cambie en el padre
 watch(
   () => props.selectedTab,
   (newValue) => {
@@ -34,7 +30,6 @@ watch(
   }
 );
 
-// Manejo del clic en un índice
 const selectTab = (index) => {
   if (!index.hasData) {
     alert(`⚠️ No hay información disponible para ${index.name}`);

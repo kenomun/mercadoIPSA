@@ -1,9 +1,9 @@
 .tab-container {
   display: flex;
-  gap: 25px; /* Aumenta la separación entre botones */
-  justify-content: flex-start; /* Alinea los botones a la izquierda */
+  gap: 25px;
+  justify-content: flex-start;
   margin-top: 20px;
-  border-bottom: 1px solid #ddd; /* Línea gris debajo de todos los tabs */
+  border-bottom: 1px solid #ddd;
   padding-bottom: 5px;
 }
 
@@ -11,7 +11,6 @@ button:hover {
   color: #0056b3;
 }
 
-/* Línea azul debajo del botón activo */
 button.active::after {
   content: "";
   position: absolute;

@@ -7,12 +7,12 @@
 
 .search-icon {
   color: #bbb;
-  margin-left: 170px; /* Añadimos un poco de espacio entre el icono y el borde */
-  pointer-events: none; /* Para evitar que el icono interfiera con la interacción */
+  margin-left: 170px;
+  pointer-events: none;
 }
 
 .form-control {
-  padding-left: 30px; /* Asegura que haya espacio para el icono sin superponerlo */
+  padding-left: 30px;
 }
 
 .input-container {
@@ -23,13 +23,13 @@
 
 .search-icon {
   position: absolute;
-  left: 10px; /* Ajusta la posición del icono */
-  color: #bbb; /* Color del icono */
-  pointer-events: none; /* Color del icono */
+  left: 10px;
+  color: #bbb;
+  pointer-events: none;
 }
 
 .form-control {
-  padding-left: 30px; /* Espacio para el icono */
+  padding-left: 30px;
 }
 
 .search-bar {

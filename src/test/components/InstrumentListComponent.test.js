@@ -38,7 +38,7 @@ describe("InstrumentListComponent", () => {
     });
 
     const nameColumnButton = wrapper.find("th button");
-    await nameColumnButton.trigger("click"); // Hacer clic para ordenar por nombre (ascendente)
+    await nameColumnButton.trigger("click");
 
     const rows = wrapper.findAll("tbody tr");
     expect(rows[0].text()).toContain("Instrumento 1");

@@ -37,7 +37,6 @@ import { ref, computed } from "vue";
 
 const emit = defineEmits(["item-selected"]);
 
-// Propiedades recibidas como props
 const props = defineProps({
   items: {
     type: Array,
@@ -53,10 +52,8 @@ const props = defineProps({
   },
 });
 
-// Estado reactivo para la búsqueda
 const searchQuery = ref("");
 
-// Computed para filtrar los items según el query
 const filteredItems = computed(() => {
   if (!searchQuery.value) return [];
   const filtered = props.items.filter((item) => {
@@ -69,11 +66,6 @@ const filteredItems = computed(() => {
 const selectItem = (item) => {
   emit("item-selected", item);
   searchQuery.value = "";
-};
-
-// Método para manejar el evento de búsqueda
-const onSearch = () => {
-  // Si se desea agregar más lógica al realizar la búsqueda, se puede hacer aquí
 };
 </script>
 

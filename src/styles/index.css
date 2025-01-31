@@ -11,9 +11,9 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: black; /* Fondo negro */
-  color: white; /* Texto blanco */
-  font-family: "Arial", sans-serif; /* Fuente más legible */
+  background-color: black;
+  color: white;
+  font-family: "Arial", sans-serif;
 }
 
 #app {
@@ -23,8 +23,7 @@ body {
   background-color: black;
 }
 
-/* Asegúrate de que los elementos dentro de #app se ajusten al fondo */
 #app > * {
-  background-color: inherit; /* Para heredar el fondo negro */
-  color: inherit; /* Para heredar el color blanco */
+  background-color: inherit;
+  color: inherit;
 }
